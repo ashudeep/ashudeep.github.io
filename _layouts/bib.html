@@ -9,9 +9,9 @@
     {% else %}
     <abbr class="badge">{{entry.abbr}}</abbr>
     {% endif %}
-    {% if entry.tag %}
+    <!-- {% if entry.tag %}
     <abbr class="badge">{{entry.tag}}</abbr>
-    {% endif %}
+    {% endif %} -->
     {% endif %}
   </div>
 
@@ -62,7 +62,10 @@
       <em>In {{entry.booktitle}}, </em>
       {% endif %}
       {% if entry.year %}
-      {{entry.year}}
+      {{entry.year}}. 
+      {% endif %}
+      {% if entry.tag %}
+        <abbr class="badge" style='background-color: var(--global-theme-color);'>{{entry.tag}}</abbr>
       {% endif %}
     </div>
     {% endif %}

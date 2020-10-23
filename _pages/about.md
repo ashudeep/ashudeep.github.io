@@ -2,23 +2,28 @@
 layout: about
 title: about
 permalink: /
-description: <a href="#">Affiliations</a>. Address. Contacts. Moto. Etc.
+description: Ph.D. Candidate, Computer Science, Cornell University, Ithaca, NY.
+publications:  true
 
 profile:
   align: right
   image: prof_pic.jpg
   address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+    <p>349, Bill and Melinda Gates Hall</p>
+    <p>107 Hoy Rd</p>
+    <p>Ithaca, NY-14853</p>
+    <a href='mailto:mail@ashudeepsingh.com'>mail@ashudeepsingh.com</a>
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
+years: [2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013]
+---
+ I am a Ph.D. Candidate in Computer Science at Cornell University in Ithaca, NY. I am advised by [Thorsten Joachims](http://www.cs.cornell.edu/people/tj/){:target="\_blank"}. I am also fortunate to have [Solon Barocas](http://solon.barocas.org/), [Karthik Sridharan](https://www.cs.cornell.edu/~sridharan/){:target="\_blank"} and [David Mimno](https://mimno.infosci.cornell.edu/){:target="\_blank"} on my dissertation committee. 
+
+  My research focuses on Fairness and Responsibility aspects of Machine Learning algorithms for Search and Recommendation systems. Through my research, I envision these search and recommendation systems to form the foundation for multistakeholder platforms that are are economically sustainable and distribute equitable benefits to the users as well as the content providers.   
+
+  During my Ph.D., I have completed internships at Google Brain, Facebook Research and Microsoft Research where I had the opportunity to collaborate with [Alex Beutel](http://alexbeutel.com/), [Fernando Diaz](https://fernando.diaz.nyc/), [John Langford](https://www.microsoft.com/en-us/research/people/jcl/). Previously, I was an undergraduate student at Indian Institute of Technology (IIT) Kanpur, and also spent a summer at Carnegie Mellon University. You can find more information in the [resume](resume/).
+
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com){:target="\_blank"}. You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/){:target="\_blank"} and [Academicons](https://jpswalsh.github.io/academicons/){:target="\_blank"}, like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.

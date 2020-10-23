@@ -6,7 +6,9 @@
       {% assign news = site.news | reverse %}
       {% for item in news limit: site.news_limit %}
         <tr>
-          <th scope="row">{{ item.date | date: "%b %-d, %Y" }}</th>
+          <th scope="row">
+            <abbr class="badge" style='background-color: var(--global-theme-color);'>{{ item.date | date: "%b %-d, %Y" }}</abbr>
+          </th>
           <td>
             {% if item.inline %}
               {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
@@ -22,3 +24,4 @@
     <p>No news so far...</p>
   {% endif %}
 </div>
+<hr>

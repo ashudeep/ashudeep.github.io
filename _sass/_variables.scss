@@ -7,9 +7,11 @@
 
 $max-content-width: 800px;
 
+
 // Colors
 $red-color:           #FF3636 !default;
 $red-color-dark:      #B71C1C !default;
+$light-red-color-dark:lighten($red-color-dark, 40%);
 $orange-color:        #F29105 !default;
 $blue-color:          #0076df !default;
 $blue-color-dark:     #00369f !default;

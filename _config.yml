@@ -16,9 +16,9 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 
-url: # the base hostname & protocol for your site
+url: www.ashudeepsingh.com # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
-port: 4444
+port: 
 last_updated: true # set to true if you want to display last updated in the footer
 
 # -----------------------------------------------------------------------------

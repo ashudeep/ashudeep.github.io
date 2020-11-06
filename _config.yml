@@ -8,11 +8,13 @@ middle_name:
 last_name: Singh
 email: ashudeep@cs.cornell.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  I am a Ph.D. Candidate at Cornell University in Ithaca, NY. I am advised by Thorsten Joachims. I am fortunate to have Solon Barocas, Karthik Sridharan and David Mimno on my dissertation committee. 
+  Ph.D. Candidate, Computer Science, Cornell University.
 
-  My research focuses on Fairness and Responsibility aspects of Machine Learning algorithms for Search and Recommendation systems. Through my research, I envision these search and recommendation systems to form the foundation for multistakeholder platforms that are are economically sustainable and distribute equitable benefits to the users as well as the content providers.   
+  # I am a Ph.D. Candidate at Cornell University in Ithaca, NY. I am advised by Thorsten Joachims. I am fortunate to have Solon Barocas, Karthik Sridharan and David Mimno on my dissertation committee. 
 
-  During my Ph.D., I have completed internships at Google Brain, Facebook Research and Microsoft Research. Previously, I was an undergraduate student at Indian Institute of Technology Kanpur (IIT Kanpur), and also spent a summer at Carnegie Mellon University.  
+  # My research focuses on Fairness and Responsibility aspects of Machine Learning algorithms for Search and Recommendation systems. Through my research, I envision these search and recommendation systems to form the foundation for multistakeholder platforms that are are economically sustainable and distribute equitable benefits to the users as well as the content providers.   
+
+  # During my Ph.D., I have completed internships at Google Brain, Facebook Research and Microsoft Research. Previously, I was an undergraduate student at Indian Institute of Technology Kanpur (IIT Kanpur), and also spent a summer at Carnegie Mellon University.  
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 

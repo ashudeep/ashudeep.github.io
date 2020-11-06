@@ -12,7 +12,6 @@ profile:
     <p>349, Bill and Melinda Gates Hall</p>
     <p>107 Hoy Rd</p>
     <p>Ithaca, NY-14853</p>
-    <a href='mailto:mail@ashudeepsingh.com'>mail@ashudeepsingh.com</a>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"

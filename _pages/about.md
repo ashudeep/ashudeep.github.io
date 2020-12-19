@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-description: Ph.D. Candidate, Computer Science, Cornell University <br> <a href='/assets/pdf/Resume_Ashudeep.pdf'>Resume</a>
+description: Ph.D. Candidate, Computer Science, Cornell University <br> <a href='/assets/pdf/Resume_AshudeepSingh.pdf'>R&eacute;sum&eacute;</a>           &middot;       <a href='/assets/pdf/CV_AshudeepSingh.pdf'>CV</a>
 publications:  false
 
 profile:
@@ -20,9 +20,13 @@ years: [2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013]
 ---
  I am a Ph.D. Candidate in Computer Science at Cornell University in Ithaca, NY. I am advised by [Thorsten Joachims](http://www.cs.cornell.edu/people/tj/){:target="\_blank"}. I am fortunate to have [Solon Barocas](http://solon.barocas.org/), [Karthik Sridharan](https://www.cs.cornell.edu/~sridharan/){:target="\_blank"} and [David Mimno](https://mimno.infosci.cornell.edu/){:target="\_blank"} on my dissertation committee. 
 
-  My research focuses on **Fairness and Responsibility** aspects of Machine Learning algorithms for **Search and Recommendation systems**. Through my research, I envision these search and recommendation systems to form the foundation for building economically sustainable multistakeholder platforms. In my research, I have developed notions and algorithms for fair distribution of opportunity and benefits for the both the users as well as the content providers. 
+  My research spans the broad areas of Machine Learning, Recommender Systems and Information Retrieval. Some aspects of my research and training have been:
+  * Building machine learning models and algorithms to **learn from interactive user feedback** in user-facing platforms such as search and recommendation.
+  * **Fairness and Responsibility** aspects of Recommender Systems considering fair distribution of opportunity for the both the users as well as the items. 
+  
+  Through my research, I envision search and recommendation systems to form the **foundation of economically sustainable multistakeholder online platforms** which ensure utility, fairness and safety for the users as well as the creators and producers.
 
-  During my Ph.D., I have completed internships at Google Brain, Facebook Research and Microsoft Research where I had the opportunity to collaborate closely with [Alex Beutel](http://alexbeutel.com/), [Fernando Diaz](https://fernando.diaz.nyc/), [John Langford](https://www.microsoft.com/en-us/research/people/jcl/). Previously, I was an undergraduate student at Indian Institute of Technology (IIT) Kanpur, and also spent a summer at Carnegie Mellon University. You can find more information in the [resume](/assets/pdf/Resume_Ashudeep.pdf/).
+  During my Ph.D., I have completed internships at Google Brain, Facebook Research and Microsoft Research where I had the opportunity to collaborate closely with [Alex Beutel](http://alexbeutel.com/), [Fernando Diaz](https://fernando.diaz.nyc/), [Khalid El-Arini](http://www.khalidelarini.com/), [John Langford](https://www.microsoft.com/en-us/research/people/jcl/). Previously, I was an undergraduate student at Indian Institute of Technology (IIT) Kanpur, and also spent a summer at Carnegie Mellon University doing research on Natural Language Processing. You can find more information in the [resume](/assets/pdf/Resume_Ashudeep.pdf/).
 
 ---
 

@@ -26,7 +26,7 @@ years: [2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013]
   
   Through my research, I envision search and recommendation systems to form the **foundation of economically sustainable multistakeholder online platforms** that ensure utility, fairness, and safety for the users as well as the creators and producers.
 
-  During my Ph.D., I have completed internships at Google Brain, Facebook Research, and Microsoft Research (NYC and Montreal) where I had the opportunity to collaborate closely with [Alex Beutel](http://alexbeutel.com/), [Fernando Diaz](https://fernando.diaz.nyc/), [Khalid El-Arini](http://www.khalidelarini.com/), [John Langford](https://www.microsoft.com/en-us/research/people/jcl/). Previously, I was an undergraduate student at the Indian Institute of Technology (IIT) Kanpur and also spent a summer at Carnegie Mellon University doing research on Natural Language Processing. You can find more information on the [resume](/assets/pdf/Resume_Ashudeep.pdf/).
+  During my Ph.D., I have completed internships at Google Brain, Facebook Research, and Microsoft Research (NYC and Montreal) where I had the opportunity to collaborate closely with [Alex Beutel](http://alexbeutel.com/), [Fernando Diaz](https://fernando.diaz.nyc/), [Khalid El-Arini](http://www.khalidelarini.com/), [John Langford](https://www.microsoft.com/en-us/research/people/jcl/). Previously, I was an undergraduate student at the Indian Institute of Technology (IIT) Kanpur and also spent a summer at Carnegie Mellon University doing research on Natural Language Processing. You can find more information on the [resume](/assets/pdf/Resume_AshudeepSingh.pdf) and [cv] (/assets/pdf/CV_AshudeepSingh.pdf).
 
 ---
 

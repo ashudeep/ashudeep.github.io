@@ -1,6 +1,6 @@
 ---
 layout: page
 permalink: /assets/pdf/CV_AshudeepSingh.pdf
-title: vita
+title: cv
 nav: true
 ---

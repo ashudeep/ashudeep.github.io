@@ -1,6 +1,8 @@
 ---
 layout: page
-permalink: /assets/pdf/thesis_defense.pdf
+permalink: /phd-thesis/
 title: phd-thesis
 nav: false
 ---
+
+<meta http-equiv="refresh" content="assets/pdf/thesis_defense.pdf" />

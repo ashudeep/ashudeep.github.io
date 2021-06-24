@@ -1,6 +1,8 @@
 ---
 layout: page
-permalink: /assets/pdf/Resume_AshudeepSingh.pdf
+permalink: /resume/
 title: resume
 nav: true
 ---
+
+<meta http-equiv="refresh" content="assets/pdf/Resume_AshudeepSingh.pdf" />

@@ -8,15 +8,13 @@ middle_name:
 last_name: Singh
 email: ashudeep@cs.cornell.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  I am a Ph.D. Candidate at Cornell University in Ithaca, NY. I am advised by Thorsten Joachims. I am also fortunate to have Solon Barocas, Karthik Sridharan and David Mimno on my dissertation committee. 
+  Ph.D. Candidate, Computer Science, Cornell University.
 
-  My research focuses on Fairness and Responsibility aspects of Machine Learning algorithms for Search and Recommendation systems. Through my research, I envision these search and recommendation systems to form the foundation for multistakeholder platforms that are are economically sustainable and distribute equitable benefits to the users as well as the content providers.   
-
-  During my Ph.D., I have completed internships at Google Brain, Facebook Research and Microsoft Research. Previously, I was an undergraduate student at Indian Institute of Technology Kanpur (IIT Kanpur), and also spent a summer at Carnegie Mellon University.  
+  I am a Ph.D. Candidate at Cornell University in Ithaca, NY advised by Thorsten Joachims. My research focuses on Machine Learning algorithms for Search and Recommendation systems as well as  Fairness and Responsibility aspects of these systems and algorithms.  
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 
-url: www.ashudeepsingh.com # the base hostname & protocol for your site
+url: http://www.ashudeepsingh.com # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/
 port: 4444
 last_updated: true # set to true if you want to display last updated in the footer
@@ -56,7 +54,7 @@ blogger_url: # your blogger URL
 contact_note: >
   Email me at <a href="mailto:ashudeep@cs.cornell.edu">ashudeep@cs.cornell.edu</a> or <a href="mailto:mail@ashudeepsingh.com">mail@ashudeepsingh.com</a>. I can also be reached via Twitter or Linkedin.
 
-google_analytics: UA-XXXXXXXXX # out your google-analytics code
+google_analytics: UA-56982603-1 # out your google-analytics code
 
 # -----------------------------------------------------------------------------
 # Blog
@@ -150,12 +148,12 @@ scholar:
 # Optional Features
 # -----------------------------------------------------------------------------
 
-enable_google_analytics:  false
+enable_google_analytics:  true
 enable_mansory:           true
 enable_math:              true
 enable_tooltips:          true
 enable_darkmode:          false
-show_social_icons:        true
+show_social_icons:        false
 
 # -----------------------------------------------------------------------------
 # Library versions

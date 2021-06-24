@@ -37,3 +37,7 @@
 {% if site.enable_darkmode %}
   <script src="{{ '/assets/js/theme.js' | relative_url }}"></script>
 {% endif %}
+
+{% if site.google_analytics and jekyll.environment == 'production' %}
+{% include analytics.html %}
+{% endif %}

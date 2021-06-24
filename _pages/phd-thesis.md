@@ -1,6 +1,6 @@
 ---
 layout: page
-hyperlink: https://drive.google.com/file/d/1RVLmalrrhL0b5cax2hJizQfqj1mFbALz/view?usp=sharing
+permalink: /assets/pdf/thesis_defense.pdf
 title: phd-thesis
-nav: true
+nav: false
 ---

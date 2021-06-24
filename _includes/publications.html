@@ -1,0 +1,12 @@
+
+<h2>publications</h2>
+Find more information on <a href='https://scholar.google.com/citations?user=zVQOtVEAAAAJ&hl=en'>google scholar</a>.
+<div class="publications" id="#publications">
+
+  {% for y in page.years %}
+    <!-- <h2 class="year">{{y}}</h2> -->
+    {% bibliography -f papers -q @*[year={{y}}]* %}
+  {% endfor %}
+
+  </div>
+  <hr>

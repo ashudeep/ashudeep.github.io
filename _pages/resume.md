@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: none
 permalink: /resume/
 title: resume
 nav: true
 ---
-
-<meta http-equiv="refresh" content="assets/pdf/Resume_AshudeepSingh.pdf" />
+<head>
+  <meta http-equiv="refresh" content="assets/pdf/Resume_AshudeepSingh.pd" />
+</head>

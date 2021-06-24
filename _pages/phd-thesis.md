@@ -1,8 +1,9 @@
 ---
-layout: page
+layout: none
 permalink: /phd-thesis/
 title: phd-thesis
 nav: false
 ---
-
-<meta http-equiv="refresh" content="assets/pdf/thesis_defense.pdf" />
+<head>
+  <meta http-equiv="refresh" content="5; URL=https://drive.google.com/file/d/1RVLmalrrhL0b5cax2hJizQfqj1mFbALz/view?usp=sharing" />
+</head>

@@ -13,6 +13,3 @@ nav: true
     <p>Google Drive <a href="assets/pdf/Resume_AshudeepSingh.pdf">link</a>.</p>
   </body>
 </html>
-<head>
-  <meta http-equiv="refresh" content="assets/pdf/Resume_AshudeepSingh.pdf" />
-</head>

@@ -5,5 +5,5 @@ title: resume
 nav: true
 ---
 <head>
-  <meta http-equiv="refresh" content="assets/pdf/Resume_AshudeepSingh.pd" />
+  <meta http-equiv="refresh" content="assets/pdf/Resume_AshudeepSingh.pdf" />
 </head>

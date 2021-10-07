@@ -2,7 +2,8 @@
 layout: about
 title: about
 permalink: /
-description: Ph.D. Candidate, Computer Science, Cornell University <br> <a href='/assets/pdf/Resume_AshudeepSingh.pdf'>R&eacute;sum&eacute;</a>           &middot;       <a href='/assets/pdf/CV_AshudeepSingh.pdf'>CV</a>
+description: Applied Research Scientist, Pinterest. <br>
+Ph.D., Computer Science, Cornell University. <br> <a href='/assets/pdf/Resume_AshudeepSingh.pdf'>R&eacute;sum&eacute;</a>           &middot;       <a href='/assets/pdf/CV_AshudeepSingh.pdf'>CV</a>
 publications:  false
 
 profile:
@@ -19,7 +20,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 years: [2020, 2019, 2018, 2017, 2016, 2015, 2014, 2013]
 ---
- I am a Ph.D. Candidate in Computer Science at Cornell University in Ithaca, NY. I am advised by [Thorsten Joachims](http://www.cs.cornell.edu/people/tj/){:target="\_blank"}. I am fortunate to have [Solon Barocas](http://solon.barocas.org/), [Karthik Sridharan](https://www.cs.cornell.edu/~sridharan/){:target="\_blank"}, and [David Mimno](https://mimno.infosci.cornell.edu/){:target="\_blank"} on my dissertation committee. 
+ I ~~am a Ph.D. Candidate~~ recently completed my PhD in Computer Science at Cornell University in Ithaca, NY. I ~~am~~ was advised by [Thorsten Joachims](http://www.cs.cornell.edu/people/tj/){:target="\_blank"} and fortunate to have [Solon Barocas](http://solon.barocas.org/), [Karthik Sridharan](https://www.cs.cornell.edu/~sridharan/){:target="\_blank"}, and [David Mimno](https://mimno.infosci.cornell.edu/){:target="\_blank"} on my dissertation committee. 
 
   My research spans the broad areas of Machine Learning, Recommender Systems, and Information Retrieval. My research focuses on:
   * Building machine learning models and algorithms to **learn from interactive user feedback** in user-facing platforms such as search and recommendation.

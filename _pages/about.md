@@ -9,11 +9,11 @@ publications:  false
 profile:
   align: right
   image: prof_pic.jpg
-  address: >
-    <p><a href=mailto:ashudeep@cs.cornell.edu><tt> ashudeep@cs.cornell.edu</tt></a></p>
-    <p>349, Bill and Melinda Gates Hall</p>
-    <p>107 Hoy Rd</p>
-    <p>Ithaca, NY-14853</p>
+  # address: >
+  #   <p><a href=mailto:ashudeep@cs.cornell.edu><tt> ashudeep@cs.cornell.edu</tt></a></p>
+  #   <p>349, Bill and Melinda Gates Hall</p>
+  #   <p>107 Hoy Rd</p>
+  #   <p>Ithaca, NY-14853</p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"

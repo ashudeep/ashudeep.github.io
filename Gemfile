@@ -8,5 +8,4 @@ group :jekyll_plugins do
     gem 'jemoji'
     gem 'unicode_utils'
     gem 'webrick'
-    gem "jekyll-mentions", "1.6.0"
 end

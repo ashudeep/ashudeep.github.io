@@ -8,9 +8,9 @@ middle_name:
 last_name: Singh
 email: ashudeep@cs.cornell.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Ph.D. Candidate, Computer Science, Cornell University.
+  Applied Scientist, Pinterest Labs.
 
-  I am a Ph.D. Candidate at Cornell University in Ithaca, NY advised by Thorsten Joachims. My research focuses on Machine Learning algorithms for Search and Recommendation systems as well as  Fairness and Responsibility aspects of these systems and algorithms.  
+  I am an Applied Research Scientist at Pinterest Labs where I build machine learning algorithms for inclusive and diverse recommendations at scale.
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 
@@ -52,7 +52,7 @@ research_gate_profile: # your profile on ResearchGate
 blogger_url: # your blogger URL
 
 contact_note: >
-  Email me at <a href="mailto:ashudeep@cs.cornell.edu">ashudeep@cs.cornell.edu</a> or <a href="mailto:mail@ashudeepsingh.com">mail@ashudeepsingh.com</a>. I can also be reached via Twitter or Linkedin.
+  Email me at <a href="mailto:mail@ashudeepsingh.com">mail@ashudeepsingh.com</a> or reach out via Twitter or Linkedin.
 
 google_analytics: UA-56982603-1 # out your google-analytics code
 

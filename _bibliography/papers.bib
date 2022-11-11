@@ -120,3 +120,17 @@
   code={https://github.com/google/ml-fairness-gym/},
   slides={facctrec2020_singh_et_al_slides.pdf}
 }
+
+@inproceedings{singh2021uncertainty,
+  abbr={NeurIPS},
+  author = {Singh, Ashudeep and Kempe, David and Joachims, Thorsten},
+  booktitle = {Neural Information Processing Systems (NeurIPS)},
+  title = {Fairness in Ranking under Uncertainty},
+  selected={true},
+  code={https://github.com/ashudeep/Uncertainity-based-fairness-for-rankings},
+  website={https://proceedings.neurips.cc/paper/2021/hash/63c3ddcc7b23daa1e42dc41f9a44a873-Abstract.html},
+  year = {2021},
+  arXiv={https://arxiv.org/abs/2107.06720},
+  abstract={Fairness has emerged as an important consideration in algorithmic decision-making. Unfairness occurs when an agent with higher merit obtains a worse outcome than an agent with lower merit. Our central point is that a primary cause of unfairness is uncertainty. A principal or algorithm making decisions never has access to the agents' true merit, and instead uses proxy features that only imperfectly predict merit (e.g., GPA, star ratings, recommendation letters). None of these ever fully capture an agent's merit; yet existing approaches have mostly been defining fairness notions directly based on observed features and outcomes. Our primary point is that it is more principled to acknowledge and model the uncertainty explicitly. The role of observed features is to give rise to a posterior distribution of the agents' merits. We use this viewpoint to define a notion of approximate fairness in ranking. We call an algorithm ϕ-fair (for ϕ∈[0,1]) if it has the following property for all agents x and all k: if agent x is among the top k agents with respect to merit with probability at least ρ (according to the posterior merit distribution), then the algorithm places the agent among the top k agents in its ranking with probability at least ϕρ. We show how to compute rankings that optimally trade off approximate fairness against utility to the principal. In addition to the theoretical characterization, we present an empirical analysis of the potential impact of the approach in simulation studies. For real-world validation, we applied the approach in the context of a paper recommendation system that we built and fielded at the KDD 2020 conference.
+  }
+}

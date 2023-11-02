@@ -2,7 +2,10 @@
 layout: about
 title: about
 permalink: /
-description: Applied Research Scientist, Pinterest. <br> Ph.D., Computer Science, Cornell University. <br> <a href='/assets/pdf/Resume_AshudeepSingh.pdf'>R&eacute;sum&eacute;</a>           &middot;       <a href='/assets/pdf/CV_AshudeepSingh.pdf'>CV</a>
+description: Applied Research Scientist, Pinterest.. <br> 
+Ph.D., Computer Science, Cornell University. <br> 
+Previously&#58; Google Brain, Facebook, Microsoft Research
+<a href='/assets/pdf/Resume_AshudeepSingh.pdf'>R&eacute;sum&eacute;</a> &middot; <a href='/assets/pdf/CV_AshudeepSingh.pdf'>CV</a>
 publications:  false
 
 profile:

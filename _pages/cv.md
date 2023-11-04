@@ -2,5 +2,5 @@
 layout: page
 permalink: /assets/pdf/CV_AshudeepSingh.pdf
 title: cv
-nav: true
+nav: false
 ---

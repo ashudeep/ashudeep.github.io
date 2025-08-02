@@ -27,35 +27,39 @@
   img {
     width: 100%;
   }
-  
-  .profile-image-container {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-    
-    .profile-image {
-      transition: opacity 0.3s ease-in-out;
-      opacity: 1;
-    }
-    
-    .profile-image-hover {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: opacity 0.3s ease-in-out;
-      opacity: 0;
-    }
-    
-    &:hover {
-      .profile-image {
-        opacity: 0;
-      }
-      
-      .profile-image-hover {
-        opacity: 1;
-      }
-    }
-  }
+}
+
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.profile-image-container .profile-image {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.profile-image-container .profile-image-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.profile-image-container:hover .profile-image {
+  opacity: 0;
+}
+
+.profile-image-container:hover .profile-image-hover {
+  opacity: 1;
 }
 
 // TODO: redefine content layout.

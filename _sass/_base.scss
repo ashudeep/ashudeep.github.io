@@ -405,6 +405,25 @@ footer.sticky-bottom {
 code {
   color: var(--global-theme-color);
 }
+
+/* Custom CSS for Twitter X Icon */
+.fab.fa-twitter {
+  font-family: sans-serif; /* Use a generic font family */
+}
+
+.fab.fa-twitter::before {
+  content: "𝕏"; /* Unicode character for the "X" symbol */
+  font-size: 1.2em; /* Adjust size as needed */
+}
+
+// Custom X (Twitter) icon fallback
+.fab.fa-x-custom::before {
+  content: "𝕏";
+  font-family: serif;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
 // Transitioning Themes
 html.transition,
 html.transition *,

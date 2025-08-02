@@ -8,9 +8,9 @@ middle_name:
 last_name: Singh
 email: mail@ashudeepsingh.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Applied Scientist, Pinterest Labs.
+  Principal Applied Scientist, Microsoft AI.
 
-  I am an Applied Research Scientist at Pinterest Labs where I build machine learning algorithms for inclusive and diverse recommendations at scale.
+  I am a Principal Applied Scientist at Microsoft AI where I build machine learning algorithms for search and recommendation systems at scale.
 footer_text: >
   Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 
@@ -41,7 +41,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 # -----------------------------------------------------------------------------
 
 github_username: ashudeep # your GitHub user name
-twitter_username: AshudeepSingh # your Twitter handle
+twitter_username: AshudeepSingh # your X (Twitter) handle
 linkedin_username: AshudeepSingh # your LinkedIn user name
 scholar_userid: zVQOtVEAAAAJ # your Google Scholar ID
 orcid_id: # your ORCID ID
@@ -52,7 +52,7 @@ research_gate_profile: # your profile on ResearchGate
 blogger_url: # your blogger URL
 
 contact_note: >
-  Email me at <a href="mailto:mail@ashudeepsingh.com">mail@ashudeepsingh.com</a> or reach out via Twitter or Linkedin.
+  Email me at <a href="mailto:mail@ashudeepsingh.com">mail@ashudeepsingh.com</a> or reach out via X or Linkedin.
 
 google_analytics: UA-56982603-1 # out your google-analytics code
 
@@ -168,8 +168,8 @@ bootstrap:
     css: "sha512-MoRNloxbStBcD8z3M/2BmnT+rg4IsMxPkXaGh2zD6LGNNFE80W3onsAhRcMAMrSoyWL9xD7Ert0men7vR8LUZg=="
     js: "sha512-M5KW3ztuIICmVIhjSqXe01oV2bpe248gOxqmlcYrEzAvws7Pw3z6BK0iGbrwvdrUQUhi3eXgtxp5I8PDo9YfjQ=="
 fontawesome:
-  version: "5.14.0"
-  integrity: "sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+  version: "6.5.0"
+  integrity: "sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw=="
 jquery:
   version: "3.5.1"
   integrity: "sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg=="

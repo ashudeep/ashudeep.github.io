@@ -15,7 +15,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<title>Ashudeep  Singh</title>
+<title>Ashudeep  Singh | Safe RL for Recommendations</title>
 <meta name="description" content="Principal Applied Scientist, Microsoft AI.
 I am a Principal Applied Scientist at Microsoft AI where I build machine learning algorithms for search and recommendation systems at scale.
 ">
@@ -39,7 +39,7 @@ I am a Principal Applied Scientist at Microsoft AI where I build machine learnin
 <link rel="shortcut icon" href="/assets/img/favicon.ico">
 <link rel="stylesheet" href="/assets/css/main.css">
 
-<link rel="canonical" href="/blog/">
+<link rel="canonical" href="/safe-rl-recs">
 
 <!-- Theming-->
 
@@ -153,18 +153,24 @@ I am a Principal Applied Scientist at Microsoft AI where I build machine learnin
     <div class="container mt-5">
       <div class="post">
 
-  <div class="header-bar">
-    <h1></h1>
-    <h2></h2>
-  </div>
+  <header class="post-header">
+    <h1 class="post-title">Safe RL for Recommendations</h1>
+    <p class="post-description">Published at FAccTRec @ RecSys 2020</p>
+  </header>
 
+  <article>
+    <p><strong>Building Healthy Recommendation Sequences for Everyone: A Safe Reinforcement Learning Approach</strong>
+Authors: Ashudeep Singh, Yoni Halpern, Nithum Thain, Konstantina Christakopoulou, Ed H. Chi, Jilin Chen, Alex Beutel (Cornell, Google)</p>
 
-  <ul class="post-list">
-    
-  </ul>
+<p><a href="publications/facctrec2020_singh_et_al.pdf">URL</a>, <a href="assets/pdf/facctrec2020_singh_et_al_slides.pdf">Slides</a></p>
 
-  
+<p><strong>Abstract</strong>: A key consideration in the design of recommender systems is the long term well-being of users. In this work, we formalize this challenge as a multi-objective, safe reinforcement learning problem, balancing positive user feedback and the “healthiness” of user trajectories. We note that in some cases, naively balancing these objectives can lead to unhealthy experiences, even if unlikely, still occurring in a small subset of users leading us to examine a distributional notion of recommendation safety. Thus, we propose a reinforcement learning approach that optimizes for positive feedback from users while simultaneously optimizing for the health of worst-case users to remain high. To empirically validate our method, we develop a novel research simulation environment motivated by a movie recommendation setting that considers exposure to violence as a proxy for unhealthy recommendations. We demonstrate how our method reduces unhealthy recommendations to the most vulnerable users, without sacrificing much user satisfaction.</p>
 
+<p><img src="/assets/img/safe-recs.png" alt="image" width="75%" height="auto" /></p>
+
+<p>Code: <a href="https://github.com/google/ml-fairness-gym/">https://github.com/google/ml-fairness-gym/</a></p>
+
+  </article>
 
 </div>
 

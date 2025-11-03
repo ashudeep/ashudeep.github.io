@@ -22,15 +22,6 @@
       </button>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
-          <!-- About -->
-          <li class="nav-item {% if page.title == 'about' %}active{% endif %}">
-            <a class="nav-link" href="{{ '/' | relative_url }}">
-              about
-              {% if page.title == "about" %}
-                <span class="sr-only">(current)</span>
-              {% endif %}
-            </a>
-          </li>
           {% if site.blog_name %}
           <!-- Blog -->
           <li class="nav-item {% if page.url contains 'blog' %}active{% endif %}">
@@ -43,6 +34,45 @@
           </li>
           {% endif %}
           <!-- Other pages -->
+          {% assign nav_items = site.data.navigation %}
+          {% if nav_items %}
+          {% for item in nav_items %}
+          {% assign is_relative = item.relative %}
+          {% if is_relative == nil %}
+            {% assign is_relative = true %}
+          {% endif %}
+          {% if is_relative %}
+            {% assign link_href = item.url | relative_url %}
+          {% else %}
+            {% assign link_href = item.url %}
+          {% endif %}
+          {% assign is_active = false %}
+          {% if item.match_url %}
+            {% if page.url == item.match_url %}
+              {% assign is_active = true %}
+            {% endif %}
+          {% elsif is_relative and page.url == item.url %}
+            {% assign is_active = true %}
+          {% endif %}
+          <li class="nav-item {% if is_active %}active{% endif %}">
+              <a class="nav-link" href="{{ link_href }}"{% if item.new_window %} target="_blank" rel="noopener"{% endif %}>
+                {{ item.title }}
+                {% if is_active %}
+                <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+          </li>
+          {% endfor %}
+          {% else %}
+          <!-- About (fallback when no navigation data is present) -->
+          <li class="nav-item {% if page.title == 'about' %}active{% endif %}">
+              <a class="nav-link" href="{{ '/' | relative_url }}">
+                about
+                {% if page.title == "about" %}
+                <span class="sr-only">(current)</span>
+                {% endif %}
+              </a>
+          </li>
           {% assign sorted_pages = site.pages | sort: "title" %}
           {% for p in sorted_pages %}
           {% if p.nav and p.autogen == nil %}
@@ -56,6 +86,7 @@
           </li>
           {% endif %}
           {% endfor %}
+          {% endif %}
           {% if site.enable_darkmode %}
             <div class = "toggle-container">
               <a id = "light-toggle">

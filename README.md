@@ -25,6 +25,8 @@ A Jekyll-based academic personal website built with the [al-folio](https://githu
 │   └── resume.md       # Resume page
 ├── _bibliography/       # Academic publications
 │   └── papers.bib      # BibTeX bibliography file
+├── _data/              # Structured data for the site
+│   └── navigation.yml # Header navigation links (pages & PDFs)
 ├── _news/              # News and announcements
 ├── _layouts/           # HTML templates
 ├── _includes/          # Reusable HTML components
@@ -85,6 +87,7 @@ A Jekyll-based academic personal website built with the [al-folio](https://githu
 #### Updating Content
 - **About/Homepage**: Edit `_pages/about.md`
 - **CV/Resume**: Update PDFs in `assets/pdf/` and links in pages
+- **Navigation links**: Edit `_data/navigation.yml` to control header items (e.g., resume/CV PDFs)
 - **News**: Add new announcements in `_news/` folder
 - **Profile Image**: Replace `assets/img/prof_pic.jpg`
 

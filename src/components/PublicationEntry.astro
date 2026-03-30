@@ -145,8 +145,8 @@ const pdfUrl = getPdfUrl(pub.pdf);
           pub.website && (
             <a
               href={pub.website}
-              target="_blank"
-              rel="noopener"
+              target={pub.website.startsWith('/') ? undefined : '_blank'}
+              rel={pub.website.startsWith('/') ? undefined : 'noopener'}
               class="text-xs px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-theme-light hover:text-white hover:border-theme-light dark:hover:bg-theme-dark dark:hover:text-white dark:hover:border-theme-dark transition-colors"
             >
               Website

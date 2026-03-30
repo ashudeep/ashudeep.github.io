@@ -128,11 +128,16 @@ const selectedPubs = publications.filter((p) => p.selected);
 <script is:inline>
   document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.pub-toggle').forEach(function (btn) {
+      btn.setAttribute('aria-expanded', 'false');
       btn.addEventListener('click', function () {
         var targetId = this.getAttribute('data-target');
         if (!targetId) return;
         var target = document.getElementById(targetId);
-        if (target) target.classList.toggle('hidden');
+        if (target) {
+          target.classList.toggle('hidden');
+          var expanded = !target.classList.contains('hidden');
+          this.setAttribute('aria-expanded', String(expanded));
+        }
       });
     });
   });

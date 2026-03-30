@@ -46,6 +46,15 @@ const pageDescription = description || siteConfig.description;
 
     <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico" />
 
+    <!-- Google Analytics -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-47S0JRRR6X"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-47S0JRRR6X');
+    </script>
+
     <!-- Theme initialization (before paint) -->
     <script is:inline>
       (function () {

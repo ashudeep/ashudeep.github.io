@@ -35,7 +35,8 @@ interface CoauthorData {
 function cleanLatex(str: string): string {
   return str
     .replace(/\{\\'\{([a-zA-Z])\}\}/g, '$1\u0301') // {\'{ e}} -> é
-    .replace(/\\'\{([a-zA-Z])\}/g, '$1\u0301')      // \'{e} -> é
+    .replace(/\{\\'\s*([a-zA-Z])\}/g, '$1\u0301')   // {\'e} -> é
+    .replace(/\\'\{([a-zA-Z])\}/g, '$1\u0301')       // \'{e} -> é
     .replace(/\{/g, '')
     .replace(/\}/g, '')
     .replace(/\\\\/g, '')

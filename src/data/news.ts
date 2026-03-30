@@ -44,4 +44,38 @@ export const news: NewsItem[] = [
     content:
       'Our paper <a href="https://arxiv.org/abs/2107.06720" target="_blank" rel="noopener">"Fairness in Ranking under Uncertainty"</a> has been accepted to NeurIPS 2021. This is joint work with my advisor Thorsten Joachims (Cornell) and David Kempe from USC.',
   },
+  {
+    date: '2021-08-01',
+    content: 'In August, I joined the Applied Science team at Pinterest.',
+  },
+  {
+    date: '2021-06-25',
+    content:
+      'I successfully defended my PhD thesis. A big thanks to my advisor and the thesis committee.',
+  },
+  {
+    date: '2021-06-01',
+    content:
+      'I will be joining Pinterest Labs to build machine learning algorithms for inclusive and diverse recommendations at scale.',
+  },
+  {
+    date: '2020-11-01',
+    content:
+      'I am on the job market for research positions in the industry. Find my resume <a href="/assets/pdf/Resume_AshudeepSingh.pdf">here</a>, cv <a href="/assets/pdf/CV_AshudeepSingh.pdf">here</a>, research statement <a href="/assets/pdf/Research_Statement_AshudeepSingh.pdf">here</a> or reach out via <a href="mailto:mail@ashudeepsingh.com">email</a> for more relevant material.',
+  },
+  {
+    date: '2020-09-20',
+    content:
+      'Our new work on <a href="http://www.ashudeepsingh.com/publications/facctrec2020_singh_et_al.pdf" target="_blank" rel="noopener">Building Healthy Recommendation Sequences for Everyone: A Safe Reinforcement Learning Approach</a> has been accepted at <a href="https://facctrec.github.io/facctrec2020/" target="_blank" rel="noopener">FAccTRec workshop on Responsible Recommendation</a> at ACM RecSys 2020. This is joint work with my collaborators at Google Research.',
+  },
+  {
+    date: '2020-08-19',
+    content:
+      '<a href="https://cacm.acm.org/news/246857-algorithm-improves-fairness-of-search-results/fulltext" target="_blank" rel="noopener">Communications of the ACM (CACM)</a> and <a href="https://news.cornell.edu/stories/2020/08/algorithm-improves-fairness-search-results" target="_blank" rel="noopener">Cornell Chronicle</a> covered a story about our ACM SIGIR 2020 paper Controlling Fairness and Bias in Dynamic Learning-to-Rank.',
+  },
+  {
+    date: '2020-07-22',
+    content:
+      'Our paper Controlling Fairness and Bias in Dynamic Learning-to-Rank has been awarded the <strong>Best Paper Award</strong> at the ACM SIGIR 2020 conference.',
+  },
 ];

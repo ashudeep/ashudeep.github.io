@@ -1,0 +1,183 @@
+---
+import type { Publication } from '../utils/bibtex';
+import { siteConfig } from '../data/site';
+
+interface Props {
+  pub: Publication;
+}
+
+const { pub } = Astro.props;
+const coauthors = siteConfig.coauthors;
+
+function getPdfUrl(pdf: string | undefined): string | undefined {
+  if (!pdf) return undefined;
+  if (pdf.startsWith('http')) return pdf;
+  return `/assets/pdf/${pdf}`;
+}
+
+const pdfUrl = getPdfUrl(pub.pdf);
+---
+
+<div class="py-4 group">
+  <div class="flex gap-3">
+    <!-- Abbreviation badge -->
+    {
+      pub.abbr && (
+        <div class="flex-shrink-0 pt-0.5">
+          <span class="inline-block px-2 py-1 text-xs font-medium text-white bg-theme-light dark:bg-theme-dark rounded">
+            {pub.abbr}
+          </span>
+          {pub.bestPaper && (
+            <span class="block mt-1 px-2 py-0.5 text-[10px] font-medium text-amber-700 dark:text-amber-300 bg-amber-100 dark:bg-amber-900/30 rounded text-center">
+              Best Paper
+            </span>
+          )}
+        </div>
+      )
+    }
+
+    <div class="flex-1 min-w-0">
+      <!-- Title -->
+      <h3 class="text-base font-medium text-gray-900 dark:text-gray-100 leading-snug">
+        {pub.title}
+      </h3>
+
+      <!-- Authors -->
+      <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+        {
+          pub.authors.map((author, i) => {
+            const isLast = i === pub.authors.length - 1;
+            const lastName = author.replace('*', '').trim().split(' ').pop() || '';
+            const coauthor = coauthors[lastName];
+            const isSelf =
+              author.includes('Ashudeep Singh') || author.includes('Singh, Ashudeep');
+            const displayName = author.replace('*', '').trim();
+
+            return (
+              <>
+                {isSelf ? (
+                  <span class="font-semibold underline decoration-dotted underline-offset-2">
+                    {displayName}
+                  </span>
+                ) : coauthor ? (
+                  <a
+                    href={coauthor.url}
+                    target="_blank"
+                    rel="noopener"
+                    class="text-gray-600 dark:text-gray-400 hover:text-theme-light dark:hover:text-theme-dark border-b border-dashed border-gray-400 dark:border-gray-500"
+                  >
+                    {displayName}
+                  </a>
+                ) : (
+                  <span>{displayName}</span>
+                )}
+                {!isLast && ', '}
+              </>
+            );
+          })
+        }
+      </p>
+
+      <!-- Venue -->
+      <p class="mt-0.5 text-sm text-gray-500 dark:text-gray-500 italic">
+        {pub.booktitle || pub.journal}
+        {pub.volume && `, vol. ${pub.volume}`}
+        {pub.pages && `, pp. ${pub.pages}`}
+        {pub.year && `, ${pub.year}`}
+      </p>
+
+      <!-- Note -->
+      {
+        pub.note && (
+          <p class="mt-0.5 text-xs text-gray-500 dark:text-gray-500" set:html={pub.note} />
+        )
+      }
+
+      <!-- Action buttons -->
+      <div class="mt-2 flex flex-wrap gap-2">
+        {
+          pub.abstract && (
+            <button
+              class="pub-toggle text-xs px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-theme-light hover:text-white hover:border-theme-light dark:hover:bg-theme-dark dark:hover:text-white dark:hover:border-theme-dark transition-colors"
+              data-target={`abstract-${pub.key}`}
+            >
+              Abstract
+            </button>
+          )
+        }
+        {
+          pdfUrl && (
+            <a
+              href={pdfUrl}
+              target="_blank"
+              rel="noopener"
+              class="text-xs px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-theme-light hover:text-white hover:border-theme-light dark:hover:bg-theme-dark dark:hover:text-white dark:hover:border-theme-dark transition-colors"
+            >
+              PDF
+            </a>
+          )
+        }
+        {
+          pub.arXiv && (
+            <a
+              href={`https://arxiv.org/abs/${pub.arXiv}`}
+              target="_blank"
+              rel="noopener"
+              class="text-xs px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-theme-light hover:text-white hover:border-theme-light dark:hover:bg-theme-dark dark:hover:text-white dark:hover:border-theme-dark transition-colors"
+            >
+              arXiv
+            </a>
+          )
+        }
+        {
+          pub.code && (
+            <a
+              href={pub.code}
+              target="_blank"
+              rel="noopener"
+              class="text-xs px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-theme-light hover:text-white hover:border-theme-light dark:hover:bg-theme-dark dark:hover:text-white dark:hover:border-theme-dark transition-colors"
+            >
+              Code
+            </a>
+          )
+        }
+        {
+          pub.website && (
+            <a
+              href={pub.website}
+              target="_blank"
+              rel="noopener"
+              class="text-xs px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-theme-light hover:text-white hover:border-theme-light dark:hover:bg-theme-dark dark:hover:text-white dark:hover:border-theme-dark transition-colors"
+            >
+              Website
+            </a>
+          )
+        }
+        {
+          pub.slides && (
+            <a
+              href={`/assets/pdf/${pub.slides}`}
+              target="_blank"
+              rel="noopener"
+              class="text-xs px-2.5 py-1 border border-gray-300 dark:border-gray-600 rounded hover:bg-theme-light hover:text-white hover:border-theme-light dark:hover:bg-theme-dark dark:hover:text-white dark:hover:border-theme-dark transition-colors"
+            >
+              Slides
+            </a>
+          )
+        }
+      </div>
+
+      <!-- Expandable abstract -->
+      {
+        pub.abstract && (
+          <div
+            id={`abstract-${pub.key}`}
+            class="pub-content hidden mt-3 p-3 bg-gray-50 dark:bg-gray-800 rounded text-sm text-gray-700 dark:text-gray-300 leading-relaxed border-l-2 border-theme-light dark:border-theme-dark"
+          >
+            {pub.abstract}
+          </div>
+        )
+      }
+    </div>
+  </div>
+</div>

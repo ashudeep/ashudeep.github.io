@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SocialIcons from '../components/SocialIcons.astro';
+import NewsSection from '../components/NewsSection.astro';
+import PublicationEntry from '../components/PublicationEntry.astro';
+import { siteConfig } from '../data/site';
+import { parseBibFile } from '../utils/bibtex';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const bibPath = path.join(process.cwd(), '_bibliography', 'papers.bib');
+const bibContent = fs.readFileSync(bibPath, 'utf-8');
+const publications = parseBibFile(bibContent);
+const selectedPubs = publications.filter((p) => p.selected);
+---
+
+<BaseLayout
+  description={`${siteConfig.firstName} ${siteConfig.lastName} - ${siteConfig.description}`}
+>
+  <!-- Profile section -->
+  <div class="sm:flex sm:gap-8 items-start">
+    <!-- Profile image -->
+    <div class="sm:w-[200px] flex-shrink-0 mb-6 sm:mb-0">
+      <div class="relative group w-[200px] mx-auto sm:mx-0">
+        <img
+          src="/assets/img/prof_pic.jpg"
+          alt={`${siteConfig.firstName} ${siteConfig.lastName}`}
+          class="rounded-lg w-full shadow-md group-hover:opacity-0 transition-opacity duration-300"
+          loading="eager"
+        />
+        <img
+          src="/assets/img/prof_pic_hover.jpg"
+          alt={`${siteConfig.firstName} ${siteConfig.lastName}`}
+          class="rounded-lg w-full shadow-md absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          loading="eager"
+        />
+      </div>
+      <div class="text-center sm:text-left mt-3">
+        <p class="text-sm text-gray-500 dark:text-gray-400 font-mono">
+          {siteConfig.email}
+        </p>
+      </div>
+    </div>
+
+    <!-- Bio content -->
+    <div class="flex-1">
+      <p class="text-sm text-gray-500 dark:text-gray-400 mb-3">
+        Principal Applied Scientist, Microsoft AI.<br />
+        Ph.D., Computer Science, Cornell University.<br />
+        <a
+          href="/assets/pdf/Resume_AshudeepSingh.pdf"
+          class="text-theme-light dark:text-theme-dark hover:underline">R&eacute;sum&eacute;</a
+        >
+        &middot;
+        <a
+          href="/assets/pdf/CV_AshudeepSingh.pdf"
+          class="text-theme-light dark:text-theme-dark hover:underline">CV</a
+        >
+      </p>
+
+      <div class="text-sm leading-relaxed text-gray-700 dark:text-gray-300 space-y-3">
+        <p>
+          <strong>Areas of Interest</strong>: AI Safety & Alignment, Responsible AI, Large Language
+          Models, Machine Learning, Information Retrieval.
+        </p>
+        <p>
+          I am a Principal Applied Scientist at Microsoft AI, focusing on agentic AI for search
+          systems. My work develops safe, human-aligned multimodal LLMs that learn from feedback
+          while ensuring trustworthy deployment at scale.
+        </p>
+        <p>
+          Previously, I worked at Pinterest Labs, pioneering bias evaluation frameworks and
+          red-teaming methodologies for LLMs and image generation models in production. I also
+          established Pinterest's fairness evaluation and mitigation frameworks across recommendation
+          systems. Prior to Pinterest, I completed my PhD at Cornell University under <a
+            href="http://www.cs.cornell.edu/people/tj/"
+            target="_blank"
+            rel="noopener"
+            class="text-theme-light dark:text-theme-dark hover:underline"
+            >Thorsten Joachims</a
+          >, establishing foundational work in fairness for ranking and recommender systems. I also
+          completed research internships at Google Brain, Facebook Research, and Microsoft Research.
+        </p>
+        <p>
+          My research bridges AI safety theory with practical deployment, publishing at top venues
+          (NeurIPS, ICML, SIGIR, KDD, FAccT) while shipping state-of-the-art responsible AI systems
+          serving hundreds of millions of users. I also serve as Area Chair for NeurIPS and ICML, and
+          co-taught the NeurIPS 2022 tutorial on responsible ML.
+        </p>
+      </div>
+
+      <div class="mt-4">
+        <SocialIcons />
+      </div>
+    </div>
+  </div>
+
+  <hr class="my-6 border-gray-200 dark:border-gray-700" />
+
+  <!-- News -->
+  <NewsSection limit={8} />
+
+  <!-- Selected Publications -->
+  <section class="mt-10">
+    <h2
+      class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2 pb-2 border-b border-gray-200 dark:border-gray-700"
+    >
+      Selected Publications
+      <a
+        href="/publications/"
+        class="text-sm font-normal text-theme-light dark:text-theme-dark hover:underline ml-2"
+        >[all publications]</a
+      >
+      <a
+        href={`https://scholar.google.com/citations?user=${siteConfig.social.scholar}`}
+        target="_blank"
+        rel="noopener"
+        class="text-sm font-normal text-theme-light dark:text-theme-dark hover:underline ml-2"
+        >[google scholar]</a
+      >
+    </h2>
+    <div class="divide-y divide-gray-100 dark:divide-gray-800">
+      {selectedPubs.map((pub) => <PublicationEntry pub={pub} />)}
+    </div>
+  </section>
+</BaseLayout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.pub-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var targetId = this.getAttribute('data-target');
+        if (!targetId) return;
+        var target = document.getElementById(targetId);
+        if (target) target.classList.toggle('hidden');
+      });
+    });
+  });
+</script>

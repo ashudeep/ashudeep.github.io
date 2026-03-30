@@ -1,0 +1,51 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PublicationEntry from '../components/PublicationEntry.astro';
+import { parseBibFile } from '../utils/bibtex';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const bibPath = path.join(process.cwd(), '_bibliography', 'papers.bib');
+const bibContent = fs.readFileSync(bibPath, 'utf-8');
+const publications = parseBibFile(bibContent);
+
+// Group by year
+const pubsByYear = new Map<number, typeof publications>();
+for (const pub of publications) {
+  const year = pub.year;
+  if (!pubsByYear.has(year)) pubsByYear.set(year, []);
+  pubsByYear.get(year)!.push(pub);
+}
+
+const sortedYears = [...pubsByYear.keys()].sort((a, b) => b - a);
+---
+
+<BaseLayout title="Publications" description="Publications by Ashudeep Singh">
+  <h1 class="text-2xl font-serif font-bold text-gray-900 dark:text-gray-100 mb-6">Publications</h1>
+
+  {
+    sortedYears.map((year) => (
+      <section class="mb-8">
+        <h2 class="text-lg font-medium text-gray-400 dark:text-gray-500 mb-1">{year}</h2>
+        <div class="divide-y divide-gray-100 dark:divide-gray-800">
+          {pubsByYear.get(year)!.map((pub) => (
+            <PublicationEntry pub={pub} />
+          ))}
+        </div>
+      </section>
+    ))
+  }
+</BaseLayout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.pub-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var targetId = this.getAttribute('data-target');
+        if (!targetId) return;
+        var target = document.getElementById(targetId);
+        if (target) target.classList.toggle('hidden');
+      });
+    });
+  });
+</script>

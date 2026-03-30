@@ -1,0 +1,157 @@
+---
+import { siteConfig } from '../data/site';
+
+const currentPath = Astro.url.pathname;
+---
+
+<header
+  class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm border-b border-gray-200 dark:border-gray-700"
+>
+  <nav class="max-w-content mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
+    <!-- Name / Logo -->
+    <a href="/" class="text-gray-900 dark:text-gray-100 hover:no-underline font-sans text-base">
+      {
+        currentPath === '/' ? (
+          <span class="font-light">
+            {siteConfig.firstName} {siteConfig.lastName}
+          </span>
+        ) : (
+          <span>
+            <span class="font-medium">{siteConfig.firstName}</span>{' '}
+            <span class="font-light">{siteConfig.lastName}</span>
+          </span>
+        )
+      }
+    </a>
+
+    <!-- Mobile menu toggle -->
+    <button
+      id="mobile-menu-btn"
+      class="sm:hidden p-2 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
+      aria-label="Toggle menu"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+
+    <!-- Navigation links -->
+    <div id="nav-links" class="hidden sm:flex items-center gap-6 text-sm">
+      {
+        siteConfig.navigation.map((item) => {
+          const isActive =
+            item.url === '/'
+              ? currentPath === '/'
+              : currentPath.startsWith(item.url.replace(/\/$/, ''));
+          return (
+            <a
+              href={item.url}
+              target={item.newWindow ? '_blank' : undefined}
+              rel={item.newWindow ? 'noopener noreferrer' : undefined}
+              class:list={[
+                'transition-colors duration-200',
+                isActive
+                  ? 'text-theme-light dark:text-theme-dark font-medium'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-theme-light dark:hover:text-theme-dark',
+              ]}
+            >
+              {item.title}
+            </a>
+          );
+        })
+      }
+
+      <!-- Dark mode toggle -->
+      <button
+        id="theme-toggle"
+        class="p-1 text-gray-600 dark:text-gray-300 hover:text-theme-light dark:hover:text-theme-dark transition-colors"
+        aria-label="Toggle dark mode"
+      >
+        <!-- Sun icon (shown in dark mode) -->
+        <svg
+          class="w-5 h-5 hidden dark:block"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+          ></path>
+        </svg>
+        <!-- Moon icon (shown in light mode) -->
+        <svg class="w-5 h-5 block dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+          ></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="hidden sm:hidden border-t border-gray-200 dark:border-gray-700">
+    <div class="px-4 py-3 space-y-2">
+      {
+        siteConfig.navigation.map((item) => {
+          const isActive =
+            item.url === '/'
+              ? currentPath === '/'
+              : currentPath.startsWith(item.url.replace(/\/$/, ''));
+          return (
+            <a
+              href={item.url}
+              target={item.newWindow ? '_blank' : undefined}
+              rel={item.newWindow ? 'noopener noreferrer' : undefined}
+              class:list={[
+                'block py-1 text-sm transition-colors',
+                isActive
+                  ? 'text-theme-light dark:text-theme-dark font-medium'
+                  : 'text-gray-600 dark:text-gray-300',
+              ]}
+            >
+              {item.title}
+            </a>
+          );
+        })
+      }
+      <button
+        id="theme-toggle-mobile"
+        class="py-1 text-sm text-gray-600 dark:text-gray-300 hover:text-theme-light dark:hover:text-theme-dark"
+      >
+        Toggle dark mode
+      </button>
+    </div>
+  </div>
+</header>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    const mobileToggle = document.getElementById('theme-toggle-mobile');
+
+    if (btn && menu) {
+      btn.addEventListener('click', function () {
+        menu.classList.toggle('hidden');
+      });
+    }
+
+    if (mobileToggle) {
+      mobileToggle.addEventListener('click', function () {
+        document.documentElement.classList.toggle('dark');
+        const isDark = document.documentElement.classList.contains('dark');
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+      });
+    }
+  });
+</script>

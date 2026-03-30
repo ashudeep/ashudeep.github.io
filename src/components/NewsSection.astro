@@ -1,0 +1,35 @@
+---
+import { news } from '../data/news';
+
+interface Props {
+  limit?: number;
+}
+
+const { limit = 8 } = Astro.props;
+const displayNews = news.slice(0, limit);
+
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr + 'T00:00:00');
+  return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+}
+---
+
+<section class="mt-8">
+  <h2
+    class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4 pb-2 border-b border-gray-200 dark:border-gray-700"
+  >
+    News
+  </h2>
+  <div class="space-y-3">
+    {
+      displayNews.map((item) => (
+        <div class="flex gap-3 text-sm">
+          <span class="flex-shrink-0 text-xs font-medium text-white bg-theme-light dark:bg-theme-dark px-2 py-0.5 rounded h-fit mt-0.5 whitespace-nowrap">
+            {formatDate(item.date)}
+          </span>
+          <span class="text-gray-700 dark:text-gray-300" set:html={item.content} />
+        </div>
+      ))
+    }
+  </div>
+</section>

@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Safe RL for Recommendations"
+  description="Building Healthy Recommendation Sequences for Everyone"
+>
+  <article class="prose dark:prose-invert max-w-none">
+    <h1>Building Healthy Recommendation Sequences for Everyone</h1>
+    <h2>A Safe Reinforcement Learning Approach</h2>
+
+    <p class="text-sm text-gray-500 dark:text-gray-400">
+      Ashudeep Singh, Yoni Halpern, Nithum Thain, Konstantina Christakopoulou, Ed H. Chi, Jilin
+      Chen, Alex Beutel
+    </p>
+
+    <p>
+      <a
+        href="http://www.ashudeepsingh.com/publications/facctrec2020_singh_et_al.pdf"
+        class="text-theme-light dark:text-theme-dark hover:underline">Paper (PDF)</a
+      >
+      &middot;
+      <a
+        href="https://github.com/google/ml-fairness-gym/"
+        target="_blank"
+        rel="noopener"
+        class="text-theme-light dark:text-theme-dark hover:underline">Code</a
+      >
+      &middot;
+      <a
+        href="/assets/pdf/facctrec2020_singh_et_al_slides.pdf"
+        class="text-theme-light dark:text-theme-dark hover:underline">Slides</a
+      >
+    </p>
+
+    <img
+      src="/assets/img/safe-recs.png"
+      alt="Safe RL for Recommendations"
+      class="max-w-md mx-auto my-6"
+    />
+
+    <h3>Abstract</h3>
+    <p>
+      A key consideration in the design of recommender systems is the long term well-being of users.
+      In this work, we formalize this challenge as a multi-objective, safe reinforcement learning
+      problem, balancing positive user feedback and the "healthiness" of user trajectories. We note
+      that in some cases, naively balancing these objectives can lead to unhealthy experiences, even
+      if unlikely, still occurring in a small subset of users leading us to examine a distributional
+      notion of recommendation safety. Thus, we propose a reinforcement learning approach that
+      optimizes for positive feedback from users while simultaneously optimizing for the health of
+      worst-case users to remain high. To empirically validate our method, we develop a novel
+      research simulation environment motivated by a movie recommendation setting that considers
+      exposure to violence as a proxy for unhealthy recommendations. We demonstrate how our method
+      reduces unhealthy recommendations to the most vulnerable users, without sacrificing much user
+      satisfaction.
+    </p>
+  </article>
+</BaseLayout>

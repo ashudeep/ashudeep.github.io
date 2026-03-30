@@ -26,3 +26,4 @@ vendor/
 Gemfile.lock
 .ruby-version
 .tweet-cache/
+package-lock.json

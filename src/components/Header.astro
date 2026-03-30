@@ -9,19 +9,11 @@ const currentPath = Astro.url.pathname;
 >
   <nav class="max-w-content mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
     <!-- Name / Logo -->
-    <a href="/" class="text-gray-900 dark:text-gray-100 hover:no-underline font-sans text-base">
-      {
-        currentPath === '/' ? (
-          <span class="font-light">
-            {siteConfig.firstName} {siteConfig.lastName}
-          </span>
-        ) : (
-          <span>
-            <span class="font-medium">{siteConfig.firstName}</span>{' '}
-            <span class="font-light">{siteConfig.lastName}</span>
-          </span>
-        )
-      }
+    <a href="/" class="text-gray-900 dark:text-gray-100 hover:no-underline font-sans text-lg">
+      <span>
+        <span class="font-medium">{siteConfig.firstName}</span>{' '}
+        <span class="font-light">{siteConfig.lastName}</span>
+      </span>
     </a>
 
     <!-- Mobile menu toggle -->

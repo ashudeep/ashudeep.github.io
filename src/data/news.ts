@@ -15,6 +15,10 @@ export const news: NewsItem[] = [
       'I left Microsoft to join <a href="https://sycamore.so" target="_blank" rel="noopener">Sycamore</a> as a Founding Member of Technical Staff, working on trust infrastructure for AI agents in production.',
   },
   {
+    date: "2024-08-12",
+    content: "I joined Microsoft AI as a Principal Applied Scientist, working on agentic AI for search systems.",
+  },
+  {
     date: "2024-05-17",
     content:
       'Paper on measuring user impact of diversification in recommendations titled "Inclusive Recommendations and User Engagement: Experimental Evidence from Pinterest" accepted at <a href="https://ec24.sigecom.org/program/accepted-papers/" target="_blank" rel="noopener">ACM EC 2024</a>.',

@@ -11,7 +11,6 @@ import path from 'node:path';
 const bibPath = path.join(process.cwd(), '_bibliography', 'papers.bib');
 const bibContent = fs.readFileSync(bibPath, 'utf-8');
 const publications = parseBibFile(bibContent);
-const selectedPubs = publications.filter((p) => p.selected);
 ---
 
 <BaseLayout
@@ -102,17 +101,12 @@ const selectedPubs = publications.filter((p) => p.selected);
   <!-- News -->
   <NewsSection limit={8} />
 
-  <!-- Selected Publications -->
+  <!-- Publications -->
   <section class="mt-10">
     <h2
       class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-2 pb-2 border-b border-gray-200 dark:border-gray-700"
     >
-      Selected Publications
-      <a
-        href="/publications/"
-        class="text-sm font-normal text-theme-light dark:text-theme-dark hover:underline ml-2"
-        >[all publications]</a
-      >
+      Publications
       <a
         href={`https://scholar.google.com/citations?user=${siteConfig.social.scholar}`}
         target="_blank"
@@ -122,7 +116,7 @@ const selectedPubs = publications.filter((p) => p.selected);
       >
     </h2>
     <div class="divide-y divide-gray-100 dark:divide-gray-800">
-      {selectedPubs.map((pub) => <PublicationEntry pub={pub} />)}
+      {publications.map((pub) => <PublicationEntry pub={pub} />)}
     </div>
   </section>
 </BaseLayout>

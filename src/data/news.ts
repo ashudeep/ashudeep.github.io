@@ -5,6 +5,11 @@ export interface NewsItem {
 
 export const news: NewsItem[] = [
   {
+    date: "2026-09-28",
+    content:
+      'Our paper <a href="https://arxiv.org/abs/2601.14440" target="_blank" rel="noopener">VisTIRA</a> has been accepted as a poster at the <a href="https://mathai-2026.github.io/cfp/" target="_blank" rel="noopener">6th Workshop on Mathematical Reasoning and AI (MATH-AI)</a> at NeurIPS 2026.',
+  },
+  {
     date: "2026-03-30",
     content:
       '<a href="https://sycamore.so" target="_blank" rel="noopener">Sycamore</a> is coming out of stealth! We are building the trust infrastructure for AI agents in production &mdash; safety, security, governance, and orchestration. We raised a $65M seed round led by Coatue and Lightspeed Venture Partners. We\'re hiring across engineering and research &mdash; reach out or apply at <a href="https://sycamore.so" target="_blank" rel="noopener">sycamore.so</a>.',
